@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-    name: 'post',
-    title: 'Post',
+    name: 'announcement',
+    title: 'Announcement',
     type: 'document',
     fields: [{
             name: 'title',
@@ -32,12 +32,6 @@ export default {
             },
         },
         {
-            name: 'categories',
-            title: 'Categories',
-            type: 'array',
-            of: [{ type: 'reference', to: { type: 'category' } }],
-        },
-        {
             name: 'publishedAt',
             title: 'Published at',
             type: 'datetime',
@@ -48,18 +42,4 @@ export default {
             type: 'blockContent',
         },
     ],
-
-    preview: {
-        select: {
-            title: 'title',
-            author: 'author.name',
-            media: 'mainImage',
-        },
-        prepare(selection) {
-            const { author } = selection
-            return Object.assign({}, selection, {
-                subtitle: author && `by ${author}`,
-            })
-        },
-    },
 }

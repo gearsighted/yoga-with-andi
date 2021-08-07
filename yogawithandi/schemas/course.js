@@ -1,7 +1,7 @@
-/* eslint-disable import/no-anonymous-default-export */
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
-    name: 'author',
-    title: 'Author',
+    name: 'course',
+    title: 'Course',
     type: 'document',
     fields: [{
             name: 'name',
@@ -26,15 +26,14 @@ export default {
             },
         },
         {
-            name: 'bio',
-            title: 'Bio',
-            type: 'array',
-            of: [{
-                title: 'Block',
-                type: 'block',
-                styles: [{ title: 'Normal', value: 'normal' }],
-                lists: [],
-            }, ],
+            name: 'description',
+            title: 'Description',
+            type: 'text',
+        },
+        {
+            name: 'price',
+            title: 'Price',
+            type: 'number',
         },
     ],
     preview: {
