@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 function Hero () {
     return (
         <div class="w-full h-screen relative text-white">
-        <img src="https://images.unsplash.com/photo-1593810450967-f9c42742e326?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80" class="absolute top-0 left-0 w-full h-full object-cover" />
+        <img src="https://images.unsplash.com/photo-1593810450967-f9c42742e326?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80" alt="Woman holding a yoga pose" class="absolute top-0 left-0 w-full h-full object-cover" />
 
         <Navbar/>
 
