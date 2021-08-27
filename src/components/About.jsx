@@ -3,16 +3,18 @@ import '../index.css';
 
 function About () {
     return (
-        <section className="flex justify-between align-center flex-col md:flex-row">
-            <div id="about-text" className="w-full md:w-50% min">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio architecto quod fugiat explicabo tenetur recusandae quo temporibus. A voluptate consectetur nisi autem doloribus dicta perspiciatis rerum sint dolorem. Modi, ducimus.
-            Blanditiis incidunt excepturi officiis maiores impedit error deleniti, sit voluptates eaque facilis commodi alias! Esse velit aperiam cumque quibusdam maxime, impedit perferendis maiores placeat vitae eos animi. Libero, ad recusandae.
-            Necessitatibus commodi enim, numquam adipisci et blanditiis praesentium incidunt voluptatum quos cum! Veritatis minima fuga recusandae aspernatur ipsam minus. Voluptatum eveniet inventore tenetur rerum nemo ea nulla labore enim explicabo?
-            Saepe magni aliquam omnis? Blanditiis deserunt corrupti quae eveniet sit exercitationem cupiditate ipsa, quibusdam qui ipsum consequuntur eaque, nemo, fugiat magnam distinctio? Modi inventore labore ipsa ducimus nemo corrupti dolore!
-            Dolores dolore eius porro quos possimus et! Porro pariatur accusantium facilis laborum repudiandae nihil commodi dolore in voluptates eos aperiam ab dolorem, tempora ducimus suscipit inventore voluptatem, exercitationem fugit voluptas.</div>
-            <div id="about-image" className="w-full md:w-50% min order-first md:order-last"><img src="https://res.cloudinary.com/gearscloud/image/upload/q_auto:good/v1628440103/Yoga%20With%20Andi/andi-headshot_gvo3ql.webp" alt="Andi Senatro Portrait Image"></img></div>
+        <section className="flex justify-between align-center flex-col md:flex-row bg-gray-500">
+            <div id="about-text" className="flex justify-center items-center w-full md:w-50% p-10">
+                <p className="font-light text-3xl max-w-2xl text-center">Andi Senatro is a Certified Yoga Teacher in the  Charlottesville, VA area. Andi completed her 230-hour yoga teacher training at Asheville Yoga Center in Asheville, NC. She has been practicing yoga for 10 years and believes in the power yoga possesses to help everyone grow stronger physically, mentally, and spiritually.</p>
+            </div>
+
+            <div id="about-image" className=" md:w-50% order-first md:order-last md:mr-20
+             p-10">
+                <img src="https://res.cloudinary.com/gearscloud/image/upload/q_auto:good/v1628440103/Yoga%20With%20Andi/andi-headshot_gvo3ql.webp" alt="Andi Senatro Portrait" className="max-w-xl rounded-lg drop-shadow-lg"></img>
+                </div>
 
         </section>
     )
 }
 
-export default About;
+export default About;  
