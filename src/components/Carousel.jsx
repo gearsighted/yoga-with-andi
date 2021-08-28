@@ -4,9 +4,12 @@ import "slick-carousel/slick/slick-theme.css";
 import '../index.css';
 import Slider from "react-slick";
 
-function Carousel() {
+function Carousel(props) {
+
+let classes = props.classes;
+
     let settings = {
-      dots: true,
+      dots: false,
       infinite: true,
       speed: 500,
       slidesToShow: 2,
@@ -18,7 +21,6 @@ function Carousel() {
             slidesToShow: 2,
             slidesToScroll: 1,
             infinite: true,
-            dots: true,
           },
         },
         {
@@ -27,6 +29,7 @@ function Carousel() {
             slidesToShow: 1,
             slidesToScroll: 1,
             initialSlide: 2,
+            arrows: false
           },
         },
         {
@@ -34,41 +37,29 @@ function Carousel() {
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
+            arrows: false,
           },
         },
       ],
     };
+
     return (
-      <div className="h-60 w-screen bg-gray-900 text-white">  
-       <h2>Slider Carousel will go here</h2>   
+      <div id="classes">    
       <Slider {...settings}>
-        {/* {projects.map((project) => (
-          <a
-            href={project.link}
-            key={project.image}
-            className="sm:w-1/2 w-100 p-4"
-            target="_blank noreferrer noopener"
-          >
-            <div className="flex relative text-black rounded-lg project-div drop-shadow-lg ">
-              <img
-                alt="gallery"
-                className="absolute inset-0 w-full h-full object-cover object-center rounded-lg"
-                src={project.image}
-              />
-              <div className="transition duration-500 px-8 py-10 relative z-10 w-full border-2 border-white bg-white opacity-0 hover:opacity-100 rounded-lg">
-                <h1 className="title-font text-lg font-medium text-brand-warning mb-1">
-                  {project.title}
-                </h1>
-                <h2 className="tracking-widest text-m title-font font-medium text-black mb-3">
-                  {project.subtitle}
-                </h2>
-                <p className="leading-relaxed text black">
-                  {project.description}
-                </p>
-              </div>
-            </div>
-          </a>
-        ))} */}
+        {classes.map((c) => (
+           <div className=" w-full md:w-2/5 p-4 mb-12">
+           <h2 className="block text-2xl text-black text-center mb-2">{c.name}</h2>
+           <div className="flex justify-center items-center">
+               <img src={c.image} className="block w-80 h-80 object-cover mb-5 rounded" alt={c.altImage}/>
+           </div>
+           <p className="mb-6 mx-auto text-gray-600 text-center leading-relaxed text-sm w-3/4 md:w-1/2">{c.description}
+           </p>
+           <p className="mb-6 mx-auto text-gray-600 text-center leading-relaxed text-sm w-3/4 md:w-1/2">{c.time}</p>
+           <div className="flex justify-center items-center">
+               <a href="contact-1.html" className="rounded-md bg-blue-400 font-normal py-4 px-8 hover:bg-pink-500 hover:text-white transition-all transition-300 ease-in">Schedule A Session</a>
+           </div>
+       </div>
+        ))}
       </Slider>
       </div>
     );
