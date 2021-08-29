@@ -12,7 +12,7 @@ function Navbar () {
                 <a href="#home" class="text-white focus:ring-blue-400 hover:text-blue-400">Home</a>
             </li>
             <li class="ml-6 focus:ring-blue-400 hover:text-blue-400">
-                <a href="#private-sessions">Private Sessions
+                <a href="#classes">Schedule a Class
                 </a>
             </li>
             <li class="ml-6 focus:ring-blue-400 hover:text-blue-400">

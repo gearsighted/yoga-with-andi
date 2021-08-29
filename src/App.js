@@ -2,6 +2,7 @@ import './index.css';
 import Hero from './components/Hero';
 import About from './components/About';
 import Carousel from './components/Carousel';
+import Footer from './components/Footer';
 import { v4 as uuidv4 } from 'uuid';
 
 
@@ -39,6 +40,7 @@ function App() {
       <Hero/>
       <Carousel classes={yogaClasses}/>
       <About/>
+      <Footer/>
     </div>
   );
 }

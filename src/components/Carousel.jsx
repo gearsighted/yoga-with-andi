@@ -2,6 +2,7 @@ import React from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../index.css';
+import '../styles/carousel.css';
 import Slider from "react-slick";
 
 function Carousel(props) {
@@ -11,9 +12,9 @@ let classes = props.classes;
     let settings = {
       dots: false,
       infinite: true,
-      speed: 500,
       slidesToShow: 2,
       slidesToScroll: 1,
+      className: 'react__slick__slider__parent',
       responsive: [
         {
           breakpoint: 1024,
@@ -44,7 +45,7 @@ let classes = props.classes;
     };
 
     return (
-      <div id="classes">    
+      <div className="" id="classes">    
       <Slider {...settings}>
         {classes.map((c) => (
            <div className=" w-full md:w-2/5 p-4 mb-12">

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../index.css';
-import '../styles/custom.css';
+import '../styles/hero.css';
 import Navbar from './Navbar';
 
 function Hero () {
@@ -14,7 +14,7 @@ function Hero () {
             <div>
                 <h1 className=" text-3xl md:text-6xl leading-tight mb-10">Andi Senatro <br className="hidden md:block font-thin" />Certified Yoga Instructor</h1>
                 <p className="text-xl mx-auto max-w-lg text-center leading-relaxed mb-10">Specializing in personalized private yoga instruction</p>
-                <a href="#private-sessions" className="text-black rounded-md bg-blue-400 font-normal py-4 px-8 hover:bg-pink-500 hover:text-white transition-all transition-300 ease-in">Get started</a>
+                <a href="#classes" className="text-black rounded-md bg-blue-400 font-normal py-4 px-8 hover:bg-pink-500 hover:text-white transition-all transition-300 ease-in">Get started</a>
             </div>
         </div>
     </div> 
