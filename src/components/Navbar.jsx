@@ -1,5 +1,6 @@
 import React from 'react';
 import '../index.css';
+import { Link } from "react-router-dom";
 
 function Navbar () {
     return (
@@ -9,17 +10,17 @@ function Navbar () {
 
         <ul class="hidden md:flex uppercase text-sm text-gray-500">
             <li>
-                <a href="#home" class="text-white focus:ring-blue-400 hover:text-blue-400">Home</a>
+                <Link to="/" className="text-white focus:ring-blue-400 hover:text-blue-400">Home</Link>
             </li>
-            <li class="ml-6 focus:ring-blue-400 hover:text-blue-400">
+            <li class="ml-6 mr-6 focus:ring-blue-400 hover:text-blue-400">
                 <a href="#classes">Schedule a Class
                 </a>
             </li>
-            <li class="ml-6 focus:ring-blue-400 hover:text-blue-400">
-                <a href="blog-1.html">Blog</a>
+            <li>
+                <Link to="/blog" className="text-white focus:ring-blue-400 hover:text-blue-400">Blog</Link>
             </li>
             <li class="ml-6 focus:ring-blue-400 hover:text-blue-400">
-                <a href="contact-1.html">Contact</a>
+            <Link to="/contact" className="text-white focus:ring-blue-400 hover:text-blue-400">Contact</Link>
             </li>
         </ul>
 
