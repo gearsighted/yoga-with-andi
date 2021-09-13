@@ -1,8 +1,12 @@
 import './index.css';
-import Hero from './components/Hero';
-import About from './components/About';
-import Carousel from './components/Carousel';
-import Footer from './components/Footer';
+import HomePage from './components/HomePage';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
 import { v4 as uuidv4 } from 'uuid';
 
 
@@ -37,10 +41,22 @@ let yogaClasses = [
 function App() {
   return (
     <div className="App">
-      <Hero/>
-      <Carousel classes={yogaClasses}/>
-      <About/>
-      <Footer/>
+      <Router>
+      <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/users">
+            <Users />
+          </Route>
+          <Route path="/">
+            <HomePage 
+            
+            />
+          </Route>
+        </Switch>
+      </Router>
+    
     </div>
   );
 }
