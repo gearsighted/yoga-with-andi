@@ -25,7 +25,7 @@ let classes = props.classes;
           },
         },
         {
-          breakpoint: 768,
+          breakpoint: 600,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
