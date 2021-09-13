@@ -1,9 +1,14 @@
 import './index.css';
-import Hero from './components/Hero';
-import About from './components/About';
-import Carousel from './components/Carousel';
-import Footer from './components/Footer';
+import Home from './components/Home';
+import Blog from './components/blog/Blog';
+import Contact from './components/Contact';
 import { v4 as uuidv4 } from 'uuid';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 
 let yogaClasses = [
@@ -36,12 +41,19 @@ let yogaClasses = [
 
 function App() {
   return (
-    <div className="App">
-      <Hero/>
-      <Carousel classes={yogaClasses}/>
-      <About/>
-      <Footer/>
-    </div>
+    <Router> 
+      <Switch>
+          <Route path="/blog">
+            <Blog />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route exact path="/" render={(props) => (
+          <Home {...props} classes={yogaClasses}/>
+           )}/>
+        </Switch>
+    </Router>
   );
 }
 

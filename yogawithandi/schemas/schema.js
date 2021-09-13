@@ -8,7 +8,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import blockContent from './blockContent';
 import post from './post';
 import author from './author';
-import course from './course';
+import privateClasses from './privateClasses'
 import category from './category';
 import announcement from './announcement';
 // Then we give our schema to the builder and provide the result to Sanity
@@ -24,7 +24,7 @@ export default createSchema({
         announcement,
         category,
         author,
-        course,
+        privateClasses,
         blockContent,
         // {
         //     name: 'class',
