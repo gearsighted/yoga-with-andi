@@ -5,7 +5,7 @@ const BlogPage = () => {
     <div>
     <header className="w-full px-6 bg-white">
         <div className="container mx-auto max-w-4xl md:flex justify-between items-center">
-            <a href="#" className="block py-6 w-full text-center md:text-left md:w-auto text-gray-dark no-underline flex justify-center items-center">
+            <a href="/" className="block py-6 w-full text-center md:text-left md:w-auto text-gray-dark no-underline flex justify-center items-center">
 					Andy Senatro
 				</a>
             <div className="w-full md:w-auto text-center md:text-right">
@@ -32,12 +32,12 @@ const BlogPage = () => {
             </p>
         </div>
 
-        <div className="container max-w-4xl mx-auto md:flex items-start py-8 px-12 md:px-0">
+        {/* <div className="container max-w-4xl mx-auto md:flex items-start py-8 px-12 md:px-0">
 
             <div className="w-full md:pr-12 mb-12">
                 <article className="mb-12">
                     <h2 className="mb-4">
-                        <a href="#" className="text-black text-xl md:text-2xl no-underline hover:underline">
+                        <a href="" className="text-black text-xl md:text-2xl no-underline hover:underline">
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 							</a>
                     </h2>
@@ -157,7 +157,7 @@ const BlogPage = () => {
 
             </div>
 
-        </div>
+        </div> */}
 
     </div>
 
