@@ -3,7 +3,6 @@ import '../index.css';
 import {
     BrowserRouter as Router,
     NavLink,
-    Link
   } from "react-router-dom";
 
 function Navbar () {
@@ -12,6 +11,7 @@ function Navbar () {
 
         <p class="text-xl tracking-wider"><span class="hover:text-pink-400 transition-all transition-300 ease-in">Andi</span> <span class="hover:text-blue-400 transition-all transition-300 ease-in">Senatro</span></p>
 
+        <Router>
         <ul class="hidden md:flex uppercase text-sm text-gray-500">
             <li>
             <NavLink to="/" activeClassName="selected" className="text-white focus:ring-blue-400 hover:text-blue-400">
@@ -34,6 +34,7 @@ function Navbar () {
             </NavLink>
             </li>
         </ul>
+        </Router>
 
     </header>
     )
