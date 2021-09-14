@@ -45,10 +45,10 @@ function App() {
     <div className="App">
       <Router>
       <Switch>
-          <Route path="/blog">
+          <Route exact path="/blog">
             <BlogPage />
           </Route>
-          <Route path='/contact'>
+          <Route exact path='/contact'>
             <ContactPage/>
           </Route>
           <Route path="/"  render={(props) => (
