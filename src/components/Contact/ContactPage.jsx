@@ -6,7 +6,7 @@ const ContactPage = () => {
         <div>
     <header class="w-full px-6 bg-white">
         <div class="container mx-auto max-w-4xl md:flex justify-between items-center">
-            <a href="#" class="block py-6 w-full text-center md:text-left md:w-auto text-gray-dark no-underline flex justify-center items-center">
+            <a href="/" class="block py-6 w-full text-center md:text-left md:w-auto text-gray-dark no-underline flex justify-center items-center">
 					Andy Senatro
 				</a>
             <div class="w-full md:w-auto text-center md:text-right">
@@ -17,7 +17,7 @@ const ContactPage = () => {
         <div class="container mx-auto max-w-4xl md:flex justify-between items-center text-sm md:text-md md:justify-start">
             <div class="w-full md:w-1/2 text-center md:text-left py-4 flex flex-wrap justify-center items-stretch md:justify-start md:items-start">
                 <a href="index.html" class="px-2 md:pl-0 md:mr-3 md:pr-3 text-gray-700 no-underline md:border-r border-gray-300">Home</a>
-                <a href="" class="px-2 md:pl-0 md:mr-3 md:pr-3 text-gray-700 no-underline md:border-r border-gray-light">About</a>
+                <a href="/about" class="px-2 md:pl-0 md:mr-3 md:pr-3 text-gray-700 no-underline md:border-r border-gray-light">About</a>
                 <a href="blog-1.html" class="px-2 md:pl-0 md:mr-3 md:pr-3 text-gray-700 no-underline md:border-r border-gray-light">Blog</a>
             </div>
             <div class="w-full md:w-1/2 text-center md:text-right">
@@ -62,7 +62,7 @@ const ContactPage = () => {
 
                 <div class="w-full md:w-1/2 p-4">
                     <div class="overflow-hidden mb-6">
-                        <img src="https://res.cloudinary.com/gearscloud/image/upload/q_auto:good/v1628440103/Yoga%20With%20Andi/andi-headshot_gvo3ql.webp" class="block w-96 h-96 object-cover mb-12"/>
+                        <img src="https://res.cloudinary.com/gearscloud/image/upload/q_auto:good/v1628440103/Yoga%20With%20Andi/andi-headshot_gvo3ql.webp" class="block w-96 h-96 object-cover mb-12" alt="andi senatro headshot"/>
                     </div>
 
                     <p class="text-black font-bold mb-1">
