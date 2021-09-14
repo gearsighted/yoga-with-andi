@@ -45,7 +45,7 @@ let classes = props.classes;
     };
 
     return (
-      <div className="" id="classes">    
+      <div className="" id="private-classes">    
       <Slider {...settings}>
         {classes.map((c) => (
            <div className=" w-full md:w-2/5 p-4 mb-12">

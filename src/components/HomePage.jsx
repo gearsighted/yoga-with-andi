@@ -1,17 +1,16 @@
 import React from 'react';
-import NavBar from './Navbar'
 import About from './About';
 import Carousel from './Carousel';
 import Hero from './Hero';
 import Footer from './Footer';
 import '../index.css';
+import './Main.css';
 
-const HomePage = () => {
+const HomePage = (props) => {
     return (
         <div>
-            <NavBar/>
             <Hero/>
-            <Carousel />
+            <Carousel classes={ props.classes }/>
             <About />
             <Footer />
         </div>

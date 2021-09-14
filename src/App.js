@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 
 import { v4 as uuidv4 } from 'uuid';
+import BlogPage from './components/Blog/BlogPage';
+import ContactPage from './components/Contact/ContactPage';
 
 
 let yogaClasses = [
@@ -43,16 +45,15 @@ function App() {
     <div className="App">
       <Router>
       <Switch>
-          <Route path="/about">
-            <About />
+          <Route path="/blog">
+            <BlogPage />
           </Route>
-          <Route path="/users">
-            <Users />
+          <Route path='/contact'>
+            <ContactPage/>
           </Route>
-          <Route path="/">
-            <HomePage 
-            
-            />
+          <Route path="/"  render={(props) => (
+          <HomePage classes={yogaClasses}/>
+        )}>   
           </Route>
         </Switch>
       </Router>
