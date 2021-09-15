@@ -1,6 +1,6 @@
 import React from 'react';
 import About from './About';
-import Carousel from './Carousel';
+import Carousel from './Carousel/Carousel';
 import Hero from './Hero';
 import Footer from './Footer';
 import '../index.css';

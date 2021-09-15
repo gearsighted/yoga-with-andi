@@ -13,8 +13,11 @@ function Hero () {
         <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center text-center px-12 z-2">
             <div>
                 <h1 className=" text-3xl md:text-6xl leading-tight mb-10">Andi Senatro <br className="hidden md:block font-thin" />Certified Yoga Instructor</h1>
-                <p className="text-xl mx-auto max-w-lg text-center leading-relaxed mb-10">Specializing in personalized private yoga instruction</p>
-                <a href="#classes" className="text-black rounded-md bg-blue-400 font-normal py-4 px-8 hover:bg-pink-500 hover:text-white transition-all transition-300 ease-in">Get started</a>
+                <p className="text-xl mx-auto max-w-lg text-center leading-relaxed mb-10">I have a passion for teaching yoga in order to encourage self-love and cultivate peace and healing.</p>
+                <div>
+                <a href="#about" className="text-black rounded-md bg-yellow-500 font-normal py-4 px-8 mr-3 hover:bg-pink-500 hover:text-white transition-all transition-300 ease-in">About Me</a>
+                <a href="#private-classes" className="text-black rounded-md bg-blue-400 font-normal py-4 px-8 ml-3 hover:bg-pink-500 hover:text-white transition-all transition-300 ease-in">Get started</a>
+                </div>
             </div>
         </div>
     </div> 

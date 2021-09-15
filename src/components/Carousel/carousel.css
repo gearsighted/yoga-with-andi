@@ -13,12 +13,14 @@
 .react__slick__slider__parent .slick-prev {
     color: black;
     z-index: 1;
+    left: 5%
 }
 
 .react__slick__slider__parent .slick-next {
     border-radius: 50%;
     color: black;
     z-index: 1;
+    right: 5%;
 }
 
 .react__slick__slider__parent .slick-prev:before,

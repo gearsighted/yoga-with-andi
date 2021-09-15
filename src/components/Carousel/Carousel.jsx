@@ -1,8 +1,8 @@
 import React from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import '../index.css';
-import '../styles/carousel.css';
+import '../../index.css';
+import './carousel.css';
 import Slider from "react-slick";
 
 function Carousel(props) {
