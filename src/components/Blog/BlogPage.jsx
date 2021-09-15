@@ -1,36 +1,80 @@
 import '../../index.css'
+import React, { useEffect, useState } from "react";
+import BlogHeader from './BlogHeader';
+import BlogFooter from './BlogFooter';
+import { Link } from "react-router-dom";
+import sanityClient from "../../client.js";
 
-const BlogPage = () => {
-    return (    
+export default function BlogPage() {
+  const [allPostsData, setAllPosts] = useState(null);
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "post"]{
+        title,
+        slug,
+        mainImage{
+          asset->{
+          _id,
+          url
+        }
+      }
+    }`
+      )
+      .then((data) => setAllPosts(data))
+      .catch(console.error);
+  }, []);
+
+  return (
     <div>
-    <header className="w-full px-6 bg-white">
-        <div className="container mx-auto max-w-4xl md:flex justify-between items-center">
-            <a href="/" className="block py-6 w-full text-center md:text-left md:w-auto text-gray-dark no-underline flex justify-center items-center">
-					Andy Senatro
-				</a>
-            <div className="w-full md:w-auto text-center md:text-right">
-            </div>
-        </div>
-    </header>
-    <nav className="w-full bg-white md:pt-0 px-6 relative z-20 border-t border-b border-gray-light">
-        <div className="container mx-auto max-w-4xl md:flex justify-between items-center text-sm md:text-md md:justify-start">
-            <div className="w-full md:w-1/2 text-center md:text-left py-4 flex flex-wrap justify-center items-stretch md:justify-start md:items-start">
-                <a href="/" className="px-2 md:pl-0 md:mr-3 md:pr-3 text-gray-700 no-underline md:border-r border-gray-light">Home</a>
-                <a href="/" className="px-2 md:pl-0 md:mr-3 md:pr-3 text-gray-700 no-underline md:border-r border-gray-light">Book Private Session</a>
-                <a href="/contact" className="px-2 md:pl-0 md:mr-3 md:pr-3 text-gray-darkest no-underline">Contact</a>
-            </div>
-            <div className="w-full md:w-1/2 text-center md:text-right">
-            </div>
-        </div>
-    </nav>
-    <div className="w-full bg-white">
+        <BlogHeader/>
+        <div className="container max-w-4xl mx-auto md:flex items-start py-8 px-12 md:px-0">
+        {allPostsData &&
+          allPostsData.map((post, index) => (<Link to={"/" + post.slug.current} key={post.slug.current}>
+          <span key={index}>
+            <img src={post.mainImage.asset.url} alt="" />
+            <span>
+              <h2>{post.title}</h2>
+            </span>
+          </span>
+        </Link>
+      ))}
+  </div>
+  <BlogFooter/>
+</div>
 
-        <div className="text-center px-6 py-12 mb-6 bg-gray-100 border-b">
-            <h1 className=" text-xl md:text-4xl pb-4">Yoga With Andi Blog</h1>
-            <p className="leading-loose text-gray-dark">
-                My Thoughts on Yoga, Meditation, and A Life Well Lived
-            </p>
-        </div>
+            // <div className="w-full md:pr-12 mb-12">
+            //   <span key={index}>
+            //     <img src={post.mainImage.asset.url} alt="" />
+            //    </span>
+            //     <article className="mb-12">
+                    
+            //         <Link to={"/" + post.slug.current} key={post.slug.current} className="text-black text-xl md:text-2xl no-underline hover:underline">
+            //         <h2 className="mb-4"> {post.title} </h2>
+            //         </Link>
+            //       <div className="mb-4 text-sm text-gray-700">
+            //             by <Link to="#" className="text-gray-700">{post.author}</Link> on 19th March 2019
+            //             <span className="font-bold mx-1"> | </span>
+            //             <Link to={post.category} className="text-gray-700">Uncategorised</Link>
+            //         </div>
+            //         <p className="text-gray-700 leading-normal">
+            //             Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+            //             eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            //         </p>
+            //     </article>  
+            //     </div>  
+  );
+}
+
+    
+   
+    
+
+
+   
+
+
 
         {/* <div className="container max-w-4xl mx-auto md:flex items-start py-8 px-12 md:px-0">
 
@@ -159,20 +203,4 @@ const BlogPage = () => {
 
         </div> */}
 
-    </div>
 
-
-   
-    <footer className="w-full bg-white px-6 border-t">
-        <div className="container mx-auto max-w-4xl py-6 flex flex-wrap md:flex-no-wrap justify-between items-center text-sm">
-            &copy;2021 Yoga With Andi. All rights reserved.
-            <div className="pt-4 md:p-0 text-center md:text-right text-xs">
-                <a href="contact-1.html" className="text-black no-underline hover:underline ml-4">Contact Me</a>
-            </div>
-        </div>
-    </footer>
-    </div>
-    )
-}
-
-export default BlogPage;

@@ -6,10 +6,10 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-
 import { v4 as uuidv4 } from 'uuid';
 import BlogPage from './components/Blog/BlogPage';
 import ContactPage from './components/Contact/ContactPage';
+import Blogpost from './components/Blog/BlogPost';
 
 
 let yogaClasses = [
@@ -50,6 +50,9 @@ function App() {
           </Route>
           <Route exact path='/contact'>
             <ContactPage/>
+          </Route>
+          <Route path="/:slug">
+            <Blogpost/>
           </Route>
           <Route path="/"  render={(props) => (
           <HomePage classes={yogaClasses}/>
